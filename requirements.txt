@@ -1,0 +1,10 @@
+Django
+#ipdb
+#ipython
+#django-debug-toolbar
+#uwsgi
+#psycopg2-binary
+# djangorestframework
+# celery
+# flower
+# django-cors-headers
