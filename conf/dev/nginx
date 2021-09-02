@@ -1,6 +1,6 @@
 upstream django-project {
     #server 127.0.0.1:8002;
-    server unix://PROJECT_ROOT_REPLACE/uwsgi.sock; # for a file socket
+    server unix:PROJECT_ROOT_REPLACE/uwsgi.sock; # for a file socket
 }
 
 server {
