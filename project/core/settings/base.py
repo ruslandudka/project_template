@@ -20,7 +20,7 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(WEBSITE_ROOT))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in prod secret!
-SECRET_KEY = ''
+SECRET_KEY = 'PROJECT_SECRET_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in prod!
 DEBUG = True
@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'core',
     # 'rest_framework',
     # 'rest_framework.authtoken',
     # 'corsheaders',
@@ -88,31 +90,30 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_ROOT, 'project.db'),
+        'NAME': os.path.join(PROJECT_ROOT, 'PROJECT_NAME.db'),
         # 'USER': '',
         # 'PASSWORD': '',
         # 'HOST': '',
         # 'PORT': 5432
     }
 }
-### SQLITE ###
 
 # ## POSTGRESQL ###
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'project_db',
-#         'USER': 'project_usr',
-#         'PASSWORD': 'project_db_password',
+#         'NAME': 'PROJECT_NAME_db',
+#         'USER': 'PROJECT_NAME_usr',
+#         'PASSWORD': 'PROJECT_NAME_password',
 #         'HOST': 'localhost',
 #         'PORT': 5432
 #     }
 # }
-# # CREATE USER project_usr with password 'project_db_password';
-# # CREATE DATABASE project_db OWNER project_usr;
-# # ALTER ROLE project_usr WITH CREATEDB;
-#
-# ## POSTGRESQL ###
+'''
+CREATE USER PROJECT_NAME_usr with password 'PROJECT_NAME_password';
+CREATE DATABASE PROJECT_NAME_db OWNER PROJECT_NAME_usr;
+GRANT ALL PRIVILEGES ON DATABASE PROJECT_NAME_db to PROJECT_NAME_usr;
+'''
 
 
 # Internationalization
