@@ -11,6 +11,5 @@ grep -rl "PROJECT_ROOT_REPLACE" ../project | xargs sed -i 's+PROJECT_ROOT_REPLAC
 grep -rl "VIRTUALENV_HOME_REPLACE" ../project | xargs sed -i 's+VIRTUALENV_HOME_REPLACE+'$VIRTUALENV_HOME_REPLACE'+g'
 grep -rl "PROJECT_SECRET_KEY" ../project | xargs sed -i 's+PROJECT_SECRET_KEY+'PROJECT_SECRET_KEY'+g'
 
-
 mv ../project/project ../project/$PROJECT_NAME
 mv ../project ../$PROJECT_NAME-backend
