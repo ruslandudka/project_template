@@ -1,10 +1,10 @@
-upstream PROJECT_NAME-project {
+upstream PROJECT_NAME_REPLACE-project {
     server unix:PROJECT_ROOT_REPLACE/uwsgi.sock; # for a file socket
 }
 
 server {
         listen 80;
-        server_name api.PROJECT_NAME.4-com.pro;
+        server_name api.PROJECT_NAME_REPLACE.4-com.pro;
         client_max_body_size 0;
         charset utf-8;
 
@@ -18,7 +18,7 @@ server {
         }
 
         location / {
-          uwsgi_pass PROJECT_NAME-project;
+          uwsgi_pass PROJECT_NAME_REPLACE-project;
           include uwsgi_params;
         }
 
