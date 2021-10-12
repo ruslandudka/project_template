@@ -2,7 +2,7 @@
 
 read -p "Enter project name: " PROJECT_NAME
 
-PROJECT_NAME_REPLACE = PROJECT_NAME
+PROJECT_NAME_REPLACE=PROJECT_NAME
 PROJECT_ROOT_REPLACE=/var/www/$PROJECT_NAME-backend
 VIRTUALENV_HOME_REPLACE=/root/.virtualenvs/$PROJECT_NAME\_env
 PROJECT_SECRET_KEY=`tr -dc 'A-Za-z0-9!#$%&<>?@' </dev/urandom | head -c 64`
