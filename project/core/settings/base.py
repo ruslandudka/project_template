@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_ROOT, 'PROJECT_NAME.db'),
+        'NAME': os.path.join(PROJECT_ROOT, 'PROJECT_NAME_REPLACE.db'),
         # 'USER': '',
         # 'PASSWORD': '',
         # 'HOST': '',
@@ -102,17 +102,17 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'PROJECT_NAME_db',
-#         'USER': 'PROJECT_NAME_usr',
-#         'PASSWORD': 'PROJECT_NAME_password',
+#         'NAME': 'PROJECT_NAME_REPLACE_db',
+#         'USER': 'PROJECT_NAME_REPLACE_usr',
+#         'PASSWORD': 'PROJECT_NAME_REPLACE_password',
 #         'HOST': 'localhost',
 #         'PORT': 5432
 #     }
 # }
 '''
-CREATE USER PROJECT_NAME_usr with password 'PROJECT_NAME_password';
-CREATE DATABASE PROJECT_NAME_db OWNER PROJECT_NAME_usr;
-GRANT ALL PRIVILEGES ON DATABASE PROJECT_NAME_db to PROJECT_NAME_usr;
+CREATE USER PROJECT_NAME_REPLACE_usr with password 'PROJECT_NAME_REPLACE_password';
+CREATE DATABASE PROJECT_NAME_REPLACE_db OWNER PROJECT_NAME_REPLACE_usr;
+GRANT ALL PRIVILEGES ON DATABASE PROJECT_NAME_REPLACE_db to PROJECT_NAME_REPLACE_usr;
 '''
 
 
